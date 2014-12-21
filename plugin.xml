@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="org.hui.cordova.plugin.sample"
+	version="0.1.0">
+
+	<name>sample</name>
+	<description>Cordova Sample Plugin</description>
+	<license>Apache 2.0</license>
+	<keywords>cordova,sample</keywords>
+
+	<js-module src="www/sample.js" name="sample">
+		<clobbers target="Sample" />
+	</js-module>
+
+
+	<!-- android -->
+	<platform name="android">
+	
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="Sample">
+				<param name="android-package" value="org.hui.cordova.plugin.sample.Sample"/>
+			</feature>
+		</config-file>
+		
+		<source-file src="src/android/Sample.java" target-dir="src/org/hui/cordova/plugin/sample" />
+
+	</platform>
+
+</plugin>

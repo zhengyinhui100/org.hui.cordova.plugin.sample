@@ -1,0 +1,12 @@
+示例：
+Sample.test({
+	success:function(param){
+		alert(param)
+	},
+	error:function(param){
+		alert(param)
+	},
+	action:'error',
+	msg:'消息',
+	comment:'插件调用原生弹窗'
+})
